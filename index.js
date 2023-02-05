@@ -1,9 +1,11 @@
-const numbers = [6, 9, 15, -2, 92, 11];
-const stats = sequenceStats(numbers);
-
-function sequenceStats(numbers) {
-    let minValue = Number.MAX_SAFE_INTEGER;
-    let maxValue = Number.MIN_SAFE_INTEGER;
+  
+  
+  const numbers = [1,33,-40, 123,65];
+  const stats = seqStats(numbers);
+  
+  function seqStats(numbers) {
+    let minValue = numbers[0];
+    let maxValue = numbers[0];
     let sum = 0;
   
     for (let i = 0; i < numbers.length; i++) {
@@ -15,41 +17,39 @@ function sequenceStats(numbers) {
     return {
       minValue: minValue,
       maxValue: maxValue,
-      numElements: numbers.length,
+      sumElements: numbers.length,
       avgValue: sum / numbers.length
     };
   }
-
+  
   console.log(stats);
 
-//  Este código define uma array de números [6, 9, 15, -2, 92, 11] e chama a função sequenceStats passando esse array como argumento.
 
-//      A função sequenceStats recebe como argumento um array de números e calcula as estatísticas pra esse array.
+  /*
 
-//      Ela inicializa as variáveis minValue, maxValue, e sum:
+  1° A constante `numbers` é um array de números inteiros.
 
-//          minValue é inicializado com o valor máximo ddo array (Number.MAX_SAFE_INTEGER), 
-//          o que representa o maior valor inteiro do array. 
-//          Isso é feito para garantir que o primeiro elemento da array irá substituir esse valor pelo seu próprio valor na primeira iteração do loop.
+  2° A constante `stats` é igual ao resultado da chamada da função `seqStats` com o array numbers como argumento.
 
+  3° A função `seqStats` é declarada com o objetivo de retornar algumas estatísticas básicas sobre o array de números.
 
-//      maxValue é inicializado com o valor mínimo do array (Number.MIN_SAFE_INTEGER), 
-//      o que representa o menor valor inteiro representável.
-//      Isso é feito para garantir que o primeiro elemento da array irá substituir esse valor pelo seu próprio valor na primeira iteração do loop.
+  4° A variável `minValue` é inicializada com o valor do primeiro elemento do array de entrada.
 
+  5° A variável `maxValue` é inicializada com o valor do primeiro elemento do array de entrada.
 
-//      sum é inicializado com zero, pois representa a soma dos elementos da array.
-//      Em seguida, o loop 'for' itera sobre todos os elementos da array. Em cada iteração,
-//                                  o valor de minValue é atualizado com o mínimo entre o seu valor atual e o valor do elemento da array na posição i.
-//      O valor de maxValue é atualizado com o máximo entre o seu valor atual e o valor do elemento da array na posição i. 
-//      O valor de sum é atualizado adicionando o valor do elemento da array na posição i.
-//
-//      Após o loop, a função sequenceStats retorna um objeto com as seguintes propriedades:
-//
-//  minValue, que representa o valor mínimo do array.
-//  maxValue, que representa o valor máximo do array.
-//  numElements, que representa o número de elementos da array.
-//  avgValue, que representa a média dos valores da array.
+  6° A variável `sum` é inicializada com zero.
+
+  7° O loop `for` é executado para cada elemento no array de entrada, começando do primeiro elemento.
+
+  8° Dentro do loop `for`, a variável `minValue` é atualizada para ser o menor valor entre ela mesma e o elemento atual do array.
+
+  9° Dentro do loop `for`, a variável `maxValue` é atualizada para ser o maior valor entre ela mesma e o elemento atual do array.
+
+  10° Dentro do loop `for`, a variável `sum` é atualizada para ser a soma dela mesma e o elemento atual do array.
+
+  11° Depois do loop `for`, a função `seqStats` retorna um objeto com as seguintes propriedades: minValue, maxValue, sumElements e avgValue.
+
+  12° O resultado da função seqStats é então impresso no console.
 
 
-//  Por fim, o valor retornado pela função é armazenado na variável stats e é exibido no console com a instrução console.log(stats).
+  */
